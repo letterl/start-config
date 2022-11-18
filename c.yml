@@ -1,0 +1,11 @@
+services:
+- name: service-0
+  addr: :8085
+  handler:
+    type: tcp
+  listener:
+    type: tcp
+  forwarder:
+    nodes:
+    - name: target-0
+      addr: 192.168.1.1:80
